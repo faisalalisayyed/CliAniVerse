@@ -20,6 +20,8 @@ python CliAniVerse.py
 
 ## Usage/Examples
 
+#### 1. Manual search
+
 1. Run using `python CliAniVerse.py`. Type the anime name you want to watch.
 2. Select the anime from the list like which season, dub or sub, etc.
 3. Select the episode to be watch.
@@ -27,7 +29,14 @@ python CliAniVerse.py
 5. You can use option for playing next episode or previous episode or search new anime.
 6. Demo/Example : 
 ![Demo](https://raw.githubusercontent.com/C0DE-SLAYER/CliAniVerse/master/img/CliAniVerse_demo.gif)
+![Demo](https://raw.githubusercontent.com/C0DE-SLAYER/CliAniVerse/master/img/browser_demo.png)
 
+#### 2. Using history
+1. Run using `python CliAniVerse.py -hist`. Select the anime to watch and it will be player in you default browser.
+2. To delete history file. `python CliAniVerse.py -del`
+3. Demo/Example : 
+![Demo](https://raw.githubusercontent.com/C0DE-SLAYER/CliAniVerse/master/img/CliAniVerse_hist_demo.gif)
+![Demo](https://raw.githubusercontent.com/C0DE-SLAYER/CliAniVerse/master/img/browser_demo.png)
 
 ## License
 
