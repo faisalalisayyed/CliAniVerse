@@ -2,7 +2,8 @@ from bs4 import BeautifulSoup
 from webbrowser import open
 
 from requests import get
-from os import uname, system
+from os import system
+from platform import system as uname
 
 from .select_anime import select_anime
 from .history import history
@@ -48,7 +49,7 @@ def search_episode(epi_no=0):
 
 def open_browser(streaming_link):
     stream_link = streaming_link
-    if uname()[4] == 'aarch64':
+    if uname() == 'Linux':
         system(f'xdg-open https:{stream_link}')
     else:
         open(f'https:{stream_link}')
