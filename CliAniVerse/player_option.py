@@ -1,5 +1,6 @@
 from time import sleep
-from os import system, uname
+from os import system
+from platform import system as uname
 
 from .select_episode import select_episode, search_episode
 
@@ -17,7 +18,7 @@ def call_fun(name='', epi='', flag=0):
 
 def player_option():
     sleep(2)
-    system('cls' if uname == 'nt' else 'clear')
+    system('cls' if uname() == 'Windows' else 'clear')
 
     print(f'Loading episode no. {call_fun.epi}')
     print(f'Currently playing {call_fun.select[0]} {call_fun.epi}/{call_fun.select[1]}\n')
@@ -51,6 +52,6 @@ def check_option():
         elif key == 'q':
             exit()
         else:
-            system('cls' if uname == 'nt' else 'clear')
+            system('cls' if uname() == 'Windows' else 'clear')
             print(f'Choose a vaild option')
             key = player_option()

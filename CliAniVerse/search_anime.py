@@ -1,12 +1,13 @@
 from bs4 import BeautifulSoup
 
 from requests import get
-from os import system, uname
+from os import system
+from platform import system as uname
 
 
 def search_anime(name='', flag=0):
 
-    system('cls' if uname == 'nt' else 'clear')
+    system('cls' if uname() == 'Windows' else 'clear')
 
     if flag == 0:
         search = input("Enter the anime name: ").replace(' ', '%20')
